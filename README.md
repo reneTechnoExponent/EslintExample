@@ -158,13 +158,6 @@ Running `npm run lint` successfully catches violations including:
 - Supports modern TypeScript features
 - Proper import resolution for TypeScript files
 
-### Security Features
-Following OWASP guidelines:
-- Prevents XSS vulnerabilities
-- Enforces secure link practices
-- Validates form accessibility
-- Prevents dangerous JavaScript patterns
-
 ## Example Linting Output
 
 ```bash
