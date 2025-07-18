@@ -216,15 +216,8 @@ C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\src\BadCodeExample.t
   28:7   error    Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element                                                                                                                                                 
                  jsx-a11y/no-static-element-interactions
   28:27  warning  Unexpected console statement                                                                                                                                                                                                                                                                                                                  
-                 no-console
 
-C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\src\main.tsx
-  4:17  error  Unexpected use of file extension "tsx" for "./App.tsx"  import/extensions
 
-C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\vite.config.ts
-  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
-The file was not found in any of the provided project(s): vite.config.ts
-
-✖ 27 problems (24 errors, 3 warnings)
+✖ 25 problems (22 errors, 3 warnings)
   7 errors and 0 warnings potentially fixable with the `--fix` option.
 ```
