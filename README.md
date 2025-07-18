@@ -161,15 +161,70 @@ Running `npm run lint` successfully catches violations including:
 ## Example Linting Output
 
 ```bash
-$ npm run lint
+PS C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup> npm run lint
 
-C:\...\src\BadCodeExample.tsx
-   3:22  error  Do not import modules using an absolute path                    import/no-absolute-path
-  12:9   error  Using target="_blank" without rel="noreferrer" is a security risk  react/jsx-no-target-blank
-  15:9   error  Using target="_blank" without rel="noreferrer" is a security risk  react/jsx-no-target-blank
-  21:9   error  Missing an explicit type attribute for button                   react/button-has-type
-  22:9   error  img elements must have an alt prop                             jsx-a11y/alt-text
-  23:9   error  Script URL is a form of eval                                   react/jsx-no-script-url
-  24:9   error  Visible, non-interactive elements with click handlers must have role attribute  jsx-a11y/no-static-element-interactions
-  27:9   error  Form label must have associated control                        jsx-a11y/label-has-associated-control
+> eslint-setup@0.0.0 lint
+> eslint . --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0
+
+
+C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\src\App.tsx
+   3:22  error  Do not import modules using an absolute path                                                                                                                      
+                     import/no-absolute-path
+  12:9   error  Using target="_blank" without rel="noreferrer" (which implies rel="noopener") is a security risk in older browsers: see https://mathiasbynens.github.io/rel-noopener/#recommendations  react/jsx-no-target-blank
+  15:9   error  Using target="_blank" without rel="noreferrer" (which implies rel="noopener") is a security risk in older browsers: see https://mathiasbynens.github.io/rel-noopener/#recommendations  react/jsx-no-target-blank
+  21:9   error  Missing an explicit type attribute for button                                                                                                                     
+                     react/button-has-type
+  21:41  error  'count' is already declared in the upper scope on line 7 column 10                                                                                                
+                     @typescript-eslint/no-shadow
+
+C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\src\BadCodeExample.tsx
+   1:19  error    'C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\node_modules\@types\react\index.d.ts' imported multiple times                                                                                                                                                                                                                       
+                 import/no-duplicates
+   2:26  error    'C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\node_modules\@types\react\index.d.ts' imported multiple times                                                                                                                                                                                                                     
+                 import/no-duplicates
+   5:24  error    Function component is not a function declaration                                                                                                                                                                                                                                                                                                 
+                 react/function-component-definition
+   7:3   error    Unexpected var, use let or const instead                                                                                                                                                                                                                                                                                                          
+                 no-var
+   7:7   error    'oldStyleVar' is assigned a value but never used                                                                                                                                                                                                                                                                                                  
+                 @typescript-eslint/no-unused-vars
+   8:7   error    Variable name `user_name` must match one of the following formats: camelCase, PascalCase, UPPER_CASE                                                                                                                                                                                                                                   
+                 @typescript-eslint/naming-convention
+   8:7   error    'user_name' is assigned a value but never used                                                                                                                                                                                                                                                                                                
+                 @typescript-eslint/no-unused-vars
+   8:7   error    'user_name' is never reassigned. Use 'const' instead                                                                                                                                                                                                                                                                                           
+                 prefer-const
+   9:9   error    'obj' is assigned a value but never used                                                                                                                                                                                                                                                                                                      
+                 @typescript-eslint/no-unused-vars
+  11:23  warning  Unexpected unnamed function                                                                                                                                                                                                                                                                                                                  
+                 func-names
+  16:18  warning  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                         
+                 @typescript-eslint/no-explicit-any
+  16:24  error    The object literal notation {} is preferable                                                                                                                                                                                                                                                                                                    
+                 no-new-object
+  25:7   error    Missing an explicit type attribute for button                                                                                                                                                                                                                                                                                                   
+                 react/button-has-type
+  26:7   error    img elements must have an alt prop, either with meaningful text, or an empty string for decorative images                                                                                                                                                                                                                                     
+                 jsx-a11y/alt-text
+  27:7   error    The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  27:10  error    A future version of React will block javascript: URLs as a security precaution. Use event handlers instead if you can. If you need to generate unsafe HTML, try using dangerouslySetInnerHTML instead                                                                                                                                             
+                 react/jsx-no-script-url
+  27:15  error    Script URL is a form of eval                                                                                                                                                                                                                                                                                                                   
+                 no-script-url
+  28:7   error    Visible, non-interactive elements with click handlers must have at least one keyboard listener                                                                                                                                                                                                                                                 
+                 jsx-a11y/click-events-have-key-events
+  28:7   error    Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element                                                                                                                                                 
+                 jsx-a11y/no-static-element-interactions
+  28:27  warning  Unexpected console statement                                                                                                                                                                                                                                                                                                                  
+                 no-console
+
+C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\src\main.tsx
+  4:17  error  Unexpected use of file extension "tsx" for "./App.tsx"  import/extensions
+
+C:\Users\rmazuela\OneDrive\Desktop\EslintSetup\eslint-setup\vite.config.ts
+  0:0  error  Parsing error: "parserOptions.project" has been provided for @typescript-eslint/parser.
+The file was not found in any of the provided project(s): vite.config.ts
+
+✖ 27 problems (24 errors, 3 warnings)
+  7 errors and 0 warnings potentially fixable with the `--fix` option.
 ```
