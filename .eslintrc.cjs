@@ -28,27 +28,14 @@ module.exports = {
     },
   },
   rules: {
-    // Prettier integration
     'prettier/prettier': 'error',
-
-    // React 17+ JSX transform
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
-
-    // Allow .tsx files for JSX
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
-
-    // Disable prop-types since we're using TypeScript
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
-
-    // Allow any for development/testing
     '@typescript-eslint/no-explicit-any': 'warn',
-
-    // Console warnings for development
     'no-console': 'warn',
-
-    // Allow devDependencies in config files
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -64,8 +51,6 @@ module.exports = {
         ],
       },
     ],
-    
-    // Disable problematic TypeScript rules that aren't available in current version
     '@typescript-eslint/lines-between-class-members': 'off',
     '@typescript-eslint/no-throw-literal': 'off',
   },
